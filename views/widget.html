@@ -1,0 +1,55 @@
+
+
+<div data-ec-gallery data-ec-gallery-{{data.widget._id}}>
+  <div data-ec-gallery-main class="slider slider-for" >
+  {% for item in data.widget.items.items%}
+  {% if item %}
+    {% if item.type == "apostrophe-images" %}
+      <div>
+        {% set image = apos.images.first(item) %}
+        <div class="image" style="background-image:url({{ apos.attachments.url(image, { size: data.options.size or 'full' })}});"></div>
+      </div>
+    {% endif %}
+
+    {% if item.type == "apostrophe-video" %}
+      <div>
+
+        <iframe width="100%" height="400px" src="{{item.video.url.replace('watch','embed').replace('?v=','/')}}?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+    {% endif %}
+
+     {% if item.type == "apostrophe-html" %}
+     <div>
+      {{ item.code | safe }}
+    </div>
+     {% endif %}
+
+  {% endif %}
+  {% endfor %}
+  </div>
+
+  <div class="slider slider-nav" data-ec-gallery-thumbs>
+  {% for item in data.widget.items.items %}
+  {% if item %}
+    {% if item.type == "apostrophe-images" %}
+    <div>
+      {% set image = apos.images.first(item) %}
+       <img src="{{ apos.attachments.url(image, { size: 'one-half' }) }}">
+    </div>
+    {% endif %}
+
+   {% if item.type == "apostrophe-video" %}
+    <div>
+      <img src="{{ item.video.thumbnail}}">
+    </div>
+    {% endif %}
+
+    {% if item.type == "apostrophe-html" %}
+     <div>
+      <img src="/modules/ec-gallery-widgets/img/360.png"/>
+    </div>
+     {% endif %}
+  {% endif %}
+  {% endfor %}
+  </div>
+</div>
