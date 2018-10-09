@@ -1,0 +1,25 @@
+{
+  "name": "ec-gallery-widgets",
+  "version": "1.0.1",
+  "description": "display images and videos and embed html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woodbrearlham/ec-gallery-widgets.git"
+  },
+  "keywords": [
+    "apostrophe-cms"
+  ],
+  "author": "Brad Wood",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/woodbrearlham/ec-gallery-widgets/issues"
+  },
+  "homepage": "https://github.com/woodbrearlham/ec-gallery-widgets#readme",
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
+  }
+}
