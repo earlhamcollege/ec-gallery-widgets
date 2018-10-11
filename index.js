@@ -1,6 +1,7 @@
 module.exports = {        
 	extend: 'apostrophe-widgets',        
 	label: 'EC Gallery',
+	perPage: 50,
 	addFields:[
 		{
 			name: 'items',
