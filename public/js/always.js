@@ -4,6 +4,7 @@ apos.define('ec-gallery-widgets', {
       self.play = function($widget, data, options) {
         console.log(data);
         var instance = data._id;
+
       $widget.find("[data-ec-gallery-"+data._id+"] [data-ec-gallery-thumbs]").slick({
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -18,6 +19,15 @@ apos.define('ec-gallery-widgets', {
         arrows: true,
         fade: true,
         asNavFor: '[data-ec-gallery-'+data._id+'] .slider-nav'
+      });
+
+      // pause all youtube videos
+      $widget.find("[data-ec-gallery-"+data._id+"] [data-ec-gallery-thumbs]").delegate( ".slick-slide", "click", function() {
+
+            $.each($widget.find("[data-ec-gallery-"+data._id+"] iframe.apostrophe-video"), function( key, value ) {
+              this.contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+            });
+
       });
     };
   }
