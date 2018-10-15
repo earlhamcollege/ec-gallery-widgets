@@ -17,8 +17,23 @@ module.exports = {
 					'apostrophe-html': {}
 				}
 			}
-		}
+		},
+		{
+			name: 'fullWidth',
+			type: 'boolean',
+			label: 'Full Width',
+			def: true
+		},
+		{
+			name: 'showDots',
+			type: 'boolean',
+			label: 'Show Dots',
+			def: false
+		},
 	],
+	arrangeFields: {
+
+	},
 	construct: function(self, options) {
   		var superPushAssets = self.pushAssets;
 		
