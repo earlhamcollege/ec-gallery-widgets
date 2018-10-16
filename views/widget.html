@@ -13,8 +13,9 @@
 
     {% if item.type == "apostrophe-video" %}
       <div>
-
-        <iframe class="apostrophe-video" width="100%" height="400px" src="{{item.video.url.replace('watch','embed').replace('?v=','/')}}?rel=0&amp;showinfo=0&enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
+        <div class="video-container">
+          <iframe class="apostrophe-video" src="{{item.video.url.replace('watch','embed').replace('?v=','/')}}?rel=0&amp;showinfo=0&enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
     {% endif %}
 
@@ -22,6 +23,16 @@
      <div>
       {{ item.code | safe }}
     </div>
+     {% endif %}
+
+     {% if item.type == "ec-360" %}
+        {% if 'iframe' in item.code %}
+          <div>
+            <div class="google-container">
+            <iframe  src=" {{ item.code.split('src="')[1].split('" ')[0] }}" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        {% endif %}
      {% endif %}
 
   {% endif %}
@@ -41,10 +52,11 @@
    {% if item.type == "apostrophe-video" %}
     <div class="thubnail image" style="background-image:url({{ item.video.thumbnail}});"></div>
     {% endif %}
+   {% if item.type == "ec-360" %}
 
-    {% if item.type == "apostrophe-html" %}
-      <div class="thubnail image" style="background-image:url(/modules/ec-gallery-widgets/img/360.png);"></div>
-     {% endif %}
+      <div class="thubnail image image-360" style="background-image:url(/modules/ec-gallery-widgets/img/360-icon.png);"></div>
+
+   {% endif %}
   {% endif %}
 </div>
   {% endfor %}

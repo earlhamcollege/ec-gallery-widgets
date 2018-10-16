@@ -1,7 +1,7 @@
 apos.define('ec-gallery-widgets', {
   extend: 'apostrophe-widgets',
   construct: function(self, options) {
-
+      console.log(self);
       self.play = function($widget, data, options) {
         console.log(data, options, $widget);
         var instance = data._id;
@@ -27,6 +27,7 @@ apos.define('ec-gallery-widgets', {
         centerPadding: '60px',
         slidesToShow: 3,
         slidesToScroll: 1,
+        arrows: true,
         asNavFor: '[data-ec-gallery-'+data._id+'] .slider-for',
         dots: showdots,
         focusOnSelect: true,
@@ -34,7 +35,7 @@ apos.define('ec-gallery-widgets', {
           {
             breakpoint: 768,
             settings: {
-              arrows: false,
+              arrows: true,
               centerMode: true,
               centerPadding: '40px',
               slidesToShow: 3
