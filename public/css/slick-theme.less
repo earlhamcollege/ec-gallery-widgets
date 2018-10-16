@@ -5,7 +5,7 @@
 @slick-font-path: "/modules/ec-gallery-widgets/css/fonts/";
 @slick-font-family: "slick";
 @slick-loader-path: "/modules/ec-gallery-widgets/css/";
-@slick-arrow-color: black;
+@slick-arrow-color: white;
 @slick-dot-color: black;
 @slick-dot-color-active: @slick-dot-color;
 @slick-prev-character: "←";
@@ -19,6 +19,14 @@
 /* Slider */
 .slick-loading .slick-list{
     background: #fff url('@{slick-loader-path}ajax-loader.gif') center center no-repeat;
+}
+
+.slider:hover,
+.slider:focus {
+    .slick-prev,
+    .slick-next {
+        opacity: 1;
+    }
 }
 
 /* Arrows */
@@ -73,12 +81,19 @@
         }
     }
 }
+.slick-prev,
+.slick-next {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 500ms;
+}
 
 .slick-prev {
-    left: -25px;
+    z-index: 3;
+    left: 10px;
     [dir="rtl"] & {
         left: auto;
-        right: -25px;
+        right: 10px;
     }
     &:before {
         content: @slick-prev-character;
@@ -89,9 +104,10 @@
 }
 
 .slick-next {
-    right: -25px;
+    z-index: 3;
+    right: 10px;
     [dir="rtl"] & {
-        left: -25px;
+        left: 10px;
         right: auto;
     }
     &:before {

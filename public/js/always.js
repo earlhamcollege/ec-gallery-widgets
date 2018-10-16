@@ -1,7 +1,6 @@
 apos.define('ec-gallery-widgets', {
   extend: 'apostrophe-widgets',
   construct: function(self, options) {
-      console.log(self);
       self.play = function($widget, data, options) {
         console.log(data, options, $widget);
         var instance = data._id;
@@ -15,11 +14,11 @@ apos.define('ec-gallery-widgets', {
 
         if (options.dots != null){
           showdots = options.dots;
-          options.dots.contextual = true;
-                       
+          data.showDots._edit = false;       
         }
         if (options.fullWidth != null){
           fullWidth = options.fullWidth;
+          data.fullWidth._edit = false;     
         }
 
       $widget.find("[data-ec-gallery-"+data._id+"] [data-ec-gallery-thumbs]").slick({
