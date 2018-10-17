@@ -13,12 +13,10 @@ apos.define('ec-gallery-widgets', {
         // Get configuration from configuations passed to ec-gallery
 
         if (options.dots != null){
-          showdots = options.dots;
-          data.showDots._edit = false;       
+          showdots = options.dots;    
         }
         if (options.fullWidth != null){
-          fullWidth = options.fullWidth;
-          data.fullWidth._edit = false;     
+          fullWidth = options.fullWidth;    
         }
 
       $widget.find("[data-ec-gallery-"+data._id+"] [data-ec-gallery-thumbs]").slick({
