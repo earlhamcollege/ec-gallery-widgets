@@ -6,7 +6,7 @@ module.exports = {
 		{
 			name: 'items',
 			type: 'area',
-			label: 'Gallery Item',
+			label: 'Gallery Items',
 			options: {
 				widgets: {
 					'apostrophe-images': {
@@ -36,6 +36,7 @@ module.exports = {
 			name: 'gallerySettings',
 			label: 'Configuration',
 			fields: [ 'fullWidth', 'showDots' ]
+			last: true
 		},
 		{
 			name: 'gallery',
