@@ -2,48 +2,51 @@ module.exports = {
 	extend: 'apostrophe-widgets',        
 	label: 'EC Gallery',
 	perPage: 50,
-	addFields:[
-		{
-			name: 'items',
-			type: 'area',
-			label: 'Gallery Items',
-			options: {
-				widgets: {
-					'apostrophe-images': {
-						limit: 1,
-						size: 'full'
-					},
-					'apostrophe-video': {},
-					'ec-360': {}
+	beforeConstruct: function(self, options) {
+		options.addFields = [
+	    	{
+				name: 'items',
+				type: 'area',
+				label: 'Gallery Items',
+				options: {
+					widgets: {
+						'apostrophe-images': {
+							limit: 1,
+							size: 'full'
+						},
+						'apostrophe-video': {},
+						'ec-360': {}
+					}
 				}
+			},
+			{
+				name: 'fullWidth',
+				type: 'boolean',
+				label: 'Full Width',
+				def: true
+			},
+			{
+				name: 'showDots',
+				type: 'boolean',
+				label: 'Show Dots',
+				def: false
 			}
-		},
-		{
-			name: 'fullWidth',
-			type: 'boolean',
-			label: 'Full Width',
-			def: true
-		},
-		{
-			name: 'showDots',
-			type: 'boolean',
-			label: 'Show Dots',
-			def: false
-		}
-	],
-	arrangeFields: [
-		{
-			name: 'gallerySettings',
-			label: 'Configuration',
-			fields: [ 'fullWidth', 'showDots' ],
-			last: true
-		},
-		{
-			name: 'gallery',
-			label: 'Gallery',
-			fields: [ 'items' ]
-		}
-	],
+    	].concat(options.addFields || [])
+
+    	options.arrangeFields = [
+	    	{
+				name: 'gallerySettings',
+				label: 'Configuration',
+				fields: [ 'fullWidth', 'showDots' ],
+				last: true
+			},
+			{
+				name: 'gallery',
+				label: 'Gallery',
+				fields: [ 'items' ]
+			}
+    	].concat(options.arrangeFields || [])
+	},
 	construct: function(self, options) {
 		var superPushAssets = self.pushAssets;
 		

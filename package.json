@@ -1,6 +1,6 @@
 {
   "name": "ec-gallery-widgets",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "description": "display images and videos and embed html",
   "main": "index.js",
   "scripts": {
