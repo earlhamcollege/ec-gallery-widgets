@@ -35,7 +35,7 @@ module.exports = {
 		{
 			name: 'gallerySettings',
 			label: 'Configuration',
-			fields: [ 'fullWidth', 'showDots' ]
+			fields: [ 'fullWidth', 'showDots' ],
 			last: true
 		},
 		{
