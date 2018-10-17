@@ -29,26 +29,22 @@ module.exports = {
 			type: 'boolean',
 			label: 'Show Dots',
 			def: false
-		},
+		}
 	],
-	arrangeFields: {
-
-	},
+	arrangeFields: [
+		{
+			name: 'gallerySettings',
+			label: 'Configuration',
+			fields: [ 'fullWidth', 'showDots' ]
+		},
+		{
+			name: 'gallery',
+			label: 'Gallery',
+			fields: [ 'items' ]
+		}
+	],
 	construct: function(self, options) {
-		 self.beforeUpdate = function(req, piece, options, callback) {
-		 	console.log(req,piece, options);
-      // Even though we have a callback, we can still use promises.
-      // We just have to invoke the callback at the end of the chain.
-         if(piece.url && piece.url.includes('iframe')){
-          var src = piece.url.split('src="')[1].split(/[ >]/)[0]
-            piece.url = src.replace('"','');
-        }
-         return callback();
-    };
-
-
-
-  		var superPushAssets = self.pushAssets;
+		var superPushAssets = self.pushAssets;
 		
 		self.pushAssets = function() {
 			superPushAssets();
