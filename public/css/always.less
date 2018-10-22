@@ -1,4 +1,7 @@
 [data-ec-gallery] {
+	
+
+
 	max-width: 600px;
 
 	&[data-full-width]{
@@ -54,6 +57,37 @@
 		    left: 0;
 		    width: 100%;
 		    height: 100%;
+	    }
+	}
+
+	.slider:hover,
+	.slider:focus {
+		.slick-prev,
+		.slick-next {
+	    	opacity: 1;
+	    }
+	}
+
+	.slick-prev,
+	.slick-next {
+	    opacity: 0;
+	    transition-property: opacity;
+	    transition-duration: 500ms;
+	}
+
+	.slick-prev {
+	    z-index: 3;
+	    left: 10px;
+		[dir="rtl"] & {
+	        right: 10px;
+	    }
+	}
+
+	.slick-next {
+	    z-index: 3;
+	    right: 10px;
+		[dir="rtl"] & {
+	        left: 10px;
 	    }
 	}
 }
