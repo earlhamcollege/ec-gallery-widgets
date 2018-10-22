@@ -52,10 +52,11 @@ module.exports = {
 		
 		self.pushAssets = function() {
 			superPushAssets();
-			self.pushAsset('stylesheet', 'slick');
-			self.pushAsset('stylesheet', 'slick-theme');
+			self.pushAsset('stylesheet', 'node_modules/slick-carousel/slick/slick');
+			self.pushAsset('stylesheet', 'node_modules/slick-carousel/slick/slick-theme');
 			self.pushAsset('stylesheet', 'always');
-			self.pushAsset('script', 'slick.min');
+			self.pushAsset('stylesheet', 'custom');
+			self.pushAsset('script', 'node_modules/slick-carousel/slick/slick');
 			self.pushAsset('script', 'always');
 		}
 	}
