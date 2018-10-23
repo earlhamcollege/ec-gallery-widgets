@@ -52,12 +52,12 @@ module.exports = {
 		
 		self.pushAssets = function() {
 			superPushAssets();
-			self.pushAsset('stylesheet', '/node_modules/slick-carousel/slick/slick');
-			self.pushAsset('stylesheet', '/node_modules/slick-carousel/slick/slick-theme');
-			self.pushAsset('stylesheet', 'always');
-			self.pushAsset('stylesheet', 'custom');
-			self.pushAsset('script', '/node_modules/slick-carousel/slick/slick');
-			self.pushAsset('script', 'always');
+			self.pushAsset('stylesheet', '/node_modules/slick-carousel/slick/slick', 'import');
+			self.pushAsset('stylesheet', '/node_modules/slick-carousel/slick/slick-theme', 'import');
+			self.pushAsset('stylesheet', 'always', 'always');
+			self.pushAsset('stylesheet', 'custom', 'always');
+			self.pushAsset('script', '/node_modules/slick-carousel/slick/slick', 'import');
+			self.pushAsset('script', 'always', 'always');
 		}
 	}
 };
