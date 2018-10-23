@@ -53,11 +53,11 @@ module.exports = {
 		
 		self.pushAssets = function() {
 			superPushAssets();
-			self.pushAsset('stylesheet', '/vendor/slick/css/slick', 'import');
-			self.pushAsset('stylesheet', '/vendor/slick/css/slick/slick-theme', 'import');
+			self.pushAsset('stylesheet', '/vendor/slick/css/slick', 'always');
+			self.pushAsset('stylesheet', '/vendor/slick/css/slick/slick-theme', 'always');
 			self.pushAsset('stylesheet', 'always', 'always');
 			self.pushAsset('stylesheet', 'custom', 'always');
-			self.pushAsset('script', '/vendor/slick/js/slick', 'import');
+			self.pushAsset('script', '/vendor/slick/js/slick', 'always');
 			self.pushAsset('script', 'always', 'always');
 		}
 	}
