@@ -55,11 +55,11 @@ module.exports = {
 		
 		self.pushAssets = function() {
 			superPushAssets();
-			self.pushAsset('stylesheet', '/node_modules/vendor/slick/css/slick', 'always');
-			self.pushAsset('stylesheet', '/node_modules/vendor/slick/css/slick/slick-theme', 'always');
+			self.pushAsset('stylesheet', 'vendor/slick/slick', 'always');
+			self.pushAsset('stylesheet', 'vendor/slick/slick-theme', 'always');
 			self.pushAsset('stylesheet', 'always', 'always');
 			self.pushAsset('stylesheet', 'custom', 'always');
-			self.pushAsset('script', 'node_modules/vendor/slick/js/slick', 'always');
+			self.pushAsset('script', 'vendor/slick/js/slick', 'always');
 			self.pushAsset('script', 'always', 'always');
 		}
 	}
