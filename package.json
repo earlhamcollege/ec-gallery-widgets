@@ -1,10 +1,11 @@
 {
   "name": "ec-gallery-widgets",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "display images and videos and embed html",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "vendor-copy"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,21 @@
   "dependencies": {
     "ec-360-widgets": "^1.0.0",
     "jquery": "^3.3.1",
-    "slick-carousel": "^1.8.1"
-  }
+    "slick-carousel": "^1.8.1",
+    "vendor-copy": "^2.0.0"
+  },
+  "vendorCopy": [
+    {
+      "from": "node_modules/slick-carousel/slick/slick.js",
+      "to": "public/vendor/slick/js/slick.js"
+    },
+    {
+      "from": "node_modules/slick-carousel/slick/slick-theme.less",
+      "to": "public/vendor/slick/css/slick-theme.less"
+    },
+    {
+      "from": "node_modules/slick-carousel/slick/slick.less",
+      "to": "public/vendor/slick/css/slick.less"
+    }
+  ]
 }
