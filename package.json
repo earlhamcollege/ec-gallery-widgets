@@ -1,10 +1,9 @@
 {
   "name": "ec-gallery-widgets",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "display images and videos and embed html",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "rimraf public/vendor",
     "postinstall": "vendor-copy"
   },
@@ -24,21 +23,21 @@
   "dependencies": {
     "ec-360-widgets": "^1.0.0",
     "jquery": "^3.3.1",
-    "rimraf": "^2.6.2",
     "slick-carousel": "^1.8.1",
-    "vendor-copy": "^2.0.0"
+    "vendor-copy": "^2.0.0",
+    "rimraf": "^2.6.2"
   },
   "vendorCopy": [
     {
-      "from": "/node_modules/slick-carousel/slick/slick.js",
+      "from": "node_modules/slick-carousel/slick/slick.js",
       "to": "public/vendor/slick/js/slick.js"
     },
     {
-      "from": "/node_modules/slick-carousel/slick/slick-theme.less",
+      "from": "node_modules/slick-carousel/slick/slick-theme.less",
       "to": "public/vendor/slick/css/slick-theme.less"
     },
     {
-      "from": "/node_modules/slick-carousel/slick/slick.less",
+      "from": "node_modules/slick-carousel/slick/slick.less",
       "to": "public/vendor/slick/css/slick.less"
     }
   ]
