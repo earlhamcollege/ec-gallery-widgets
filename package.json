@@ -1,10 +1,11 @@
 {
   "name": "ec-gallery-widgets",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "display images and videos and embed html",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "rimraf public/vendor",
     "postinstall": "vendor-copy"
   },
   "repository": {
@@ -24,7 +25,8 @@
     "ec-360-widgets": "^1.0.0",
     "jquery": "^3.3.1",
     "slick-carousel": "^1.8.1",
-    "vendor-copy": "^2.0.0"
+    "vendor-copy": "^2.0.0",
+    "rimraf": "2"
   },
   "vendorCopy": [
     {
