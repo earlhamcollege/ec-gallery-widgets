@@ -1,6 +1,6 @@
 {
   "name": "ec-gallery-widgets",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "display images and videos and embed html",
   "main": "index.js",
   "scripts": {
@@ -30,15 +30,15 @@
   },
   "vendorCopy": [
     {
-      "from": "node_modules/slick-carousel/slick/slick.js",
+      "from": "/node_modules/slick-carousel/slick/slick.js",
       "to": "public/vendor/slick/js/slick.js"
     },
     {
-      "from": "node_modules/slick-carousel/slick/slick-theme.less",
+      "from": "/node_modules/slick-carousel/slick/slick-theme.less",
       "to": "public/vendor/slick/css/slick-theme.less"
     },
     {
-      "from": "node_modules/slick-carousel/slick/slick.less",
+      "from": "/node_modules/slick-carousel/slick/slick.less",
       "to": "public/vendor/slick/css/slick.less"
     }
   ]
