@@ -1,6 +1,6 @@
 {
   "name": "ec-gallery-widgets",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "display images and videos and embed html",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,9 @@
     "frontend-dependencies": "^1.1.5",
     "jquery": "^3.3.1",
     "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "shelljs": "0.7.4"
   },
   "frontendDependencies": {
     "target": "public/vendor",
