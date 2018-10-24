@@ -1,5 +1,3 @@
-const vendorCopy = require('vendor-copy');
-
 module.exports = {        
 	extend: 'apostrophe-widgets',        
 	label: 'EC Gallery',
