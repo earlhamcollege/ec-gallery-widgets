@@ -59,7 +59,7 @@ module.exports = {
 			self.pushAsset('stylesheet', 'vendor/slick/slick-theme', 'always');
 			self.pushAsset('stylesheet', 'always', 'always');
 			self.pushAsset('stylesheet', 'custom', 'always');
-			self.pushAsset('script', 'vendor/slick/js/slick', 'always');
+			self.pushAsset('script', 'vendor/slick/slick', 'always');
 			self.pushAsset('script', 'always', 'always');
 		}
 	}

@@ -4,7 +4,6 @@
   "description": "display images and videos and embed html",
   "main": "index.js",
   "scripts": {
-    "postinstall": "node ./node_modules/frontend-dependencies/index.js"
   },
   "repository": {
     "type": "git",
@@ -21,26 +20,7 @@
   "homepage": "https://github.com/woodbrearlham/ec-gallery-widgets#readme",
   "dependencies": {
     "ec-360-widgets": "^1.0.0",
-    "frontend-dependencies": "^1.1.5",
     "jquery": "^3.3.1",
     "slick-carousel": "^1.8.1"
-  },
-  "devDependencies": {
-    "shelljs": "0.7.4"
-  },
-  "frontendDependencies": {
-    "target": "public/vendor",
-    "packages": {
-      "jquery": {
-        "version": "^3.3.1",
-        "src": "dist/*",
-        "target": "public/vendor/jquery"
-      },
-      "slick-carousel": {
-        "version": "^1.8.1",
-        "src": "slick/*",
-        "target": "public/vendor/slick"
-      }
-    }
   }
 }
