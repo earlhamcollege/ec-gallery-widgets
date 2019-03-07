@@ -1,6 +1,6 @@
 {
   "name": "ec-gallery-widgets",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "display images and videos and embed html",
   "main": "index.js",
   "scripts": {},
@@ -18,8 +18,6 @@
   },
   "homepage": "https://github.com/woodbrearlham/ec-gallery-widgets#readme",
   "dependencies": {
-    "ec-360-widgets": "^1.0.0",
-    "jquery": "^3.3.1",
-    "slick-carousel": "^1.8.1"
+    "ec-360-widgets": "^1.0.0"
   }
 }
